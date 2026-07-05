@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FridayFunny Premium Sauna & Onsen | ออนเซ็นและซาวน่าญี่ปุ่นแท้ นนทบุรี</title>
+    <meta name="description" content="สัมผัสประสบการณ์ซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี บริการนวด สปา และร้านอาหารญี่ปุ่นระดับพรีเมียม จองคิวออนไลน์ได้ทันที">
+    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts: Outfit for English & Noto Sans Thai for Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#home" class="logo-area">
+                <img src="assets/logo.png" alt="FridayFunny Logo" class="nav-logo">
+                <div class="logo-text">
+                    <span class="logo-title">FridayFunny</span>
+                    <span class="logo-subtitle">PREMIUM SAUNA</span>
+                </div>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" id="nav-home">HOME</a>
+                <a href="#massage-spa" class="nav-link" id="nav-massage-spa">Massage&Spa</a>
+                <a href="#restaurant" class="nav-link" id="nav-restaurant">Restaurant</a>
+                <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+                <a href="#about" class="nav-link" id="nav-about">About us</a>
+                <a href="#" class="nav-link" id="nav-member" onclick="openMemberModal(event)">Member</a>
+                <a href="#" class="nav-link btn-login" id="nav-login" onclick="openAuthModal(event)">Register/Login</a>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('assets/hero_bg.png');">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> Premium Sauna & Onsen</span>
+            <h1 class="hero-title-jp">極上の整い</h1>
+            <p class="hero-subtitle-jp">心และกาย... สู่จุด "ผ่อนคลาย" ที่แท้จริง</p>
+            <p class="hero-desc">
+                ยกระดับการผ่อนคลายด้วยซาวน่าสไตล์ญี่ปุ่นและห้องแช่ออนเซ็นไม้สนธรรมชาติที่ออกแบบเพื่อการบำบัดอย่างแท้จริง 
+                คืนพลังงานชีวิตและความสดชื่นให้กับร่างกายและจิตใจของคุณในทุกวินาที
+            </p>
+            <div class="hero-actions">
+                <a href="#massage-spa" class="btn btn-primary">
+                    จองบริการ Massage & Spa <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-secondary">เรียนรู้เพิ่มเติม</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about" aria-label="Scroll down">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us & Onsen Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="assets/onsen_tub.png" alt="FridayFunny Onsen Wooden Tub" class="about-img">
+                    <div class="about-img-glow"></div>
+                </div>
+                <div class="about-text-content">
+                    <div class="section-header">
+                        <span class="section-tag">About Us</span>
+                        <h2>ซาวน่าและออนเซ็นญี่ปุ่นแท้ <span>แห่งแรกในนนทบุรี</span></h2>
+                    </div>
+                    
+                    <div class="about-desc-thai">
+                        <p class="highlight-text">
+                            ชาวนนท์ <strong>FridayFunny Premium Sauna</strong> บริการซาวน่าออนเซ็น ญี่ปุ่นแท้ สัมผัสซาวน่าและออนเซ็นญี่ปุ่นแห่งแรกในนนทบุรี
+                        </p>
+                        <p>
+                            สถานที่ของเราตั้งอยู่ใจกลางบางบัวทอง ซึ่งเป็นย่านพักผ่อนแห่งใหม่ของนนทบุรี ช่วยให้คุณหนีออกจากความวุ่นวายของชีวิตได้อย่างสงบสุข ดำเนินการโดยทีมงานที่มีชื่อเสียงในการจัดงานซาวน่าญี่ปุ่น เรานำวัฒนธรรมซาวน่าและสปาแบบญี่ปุ่นแท้ๆ มาสู่ประเทศไทยเป็นครั้งแรก
+                        </p>
+                    </div>
+
+                    <div class="about-desc-eng">
+                        <p>
+                            Located in the heart of Bang Bua Thong - Nonthaburi's newest wellness and relaxation hub - our sanctuary offers a peaceful escape from the hustle and bustle of everyday life. Managed by a team renowned for organizing premium Japanese sauna events, we are proud to bring an authentic Japanese sauna and spa culture to Thailand.
+                        </p>
+                    </div>
+
+                    <div class="about-cta">
+                        <button class="btn btn-primary btn-glow" onclick="openBookingModal('sauna-onsen')">
+                            สนใจจองคลิกจองเลย <i class="fa-solid fa-calendar-check"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Massage & Spa Services Section -->
+    <section id="massage-spa" class="services-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Our Services</span>
+                <h2>ผ่อนคลายกับ <span>บริการนวดและสปาพรีเมียม</span></h2>
+                <p class="section-intro">เลือกสรรบริการดูแลสุขภาพร่างกายและจิตใจด้วยศาสตร์แห่งการบำบัดอันลึกซึ้ง</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-hot-tub-person"></i>
+                    </div>
+                    <h3>Premium Japanese Onsen</h3>
+                    <p class="service-price">เริ่มต้น 450 บาท</p>
+                    <p class="service-desc">
+                        แช่น้ำแร่ธรรมชาติสไตล์ญี่ปุ่นในอ่างไม้ฮิโนกิ ช่วยผ่อนคลายกล้ามเนื้อ กระตุ้นการไหลเวียนของโลหิต และทำให้ผิวพรรณเปล่งปลั่ง
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-circle-check"></i> บ่อน้ำร้อนอุณหภูมิควบคุม 40-42°C</li>
+                        <li><i class="fa-solid fa-circle-check"></i> บริการผ้าขนหนูและสิ่งอำนวยความสะดวกครบครัน</li>
+                        <li><i class="fa-solid fa-circle-check"></i> บรรยากาศผ่อนคลายสไตล์เซน</li>
+                    </ul>
+                    <button class="btn btn-card" onclick="openBookingModal('onsen')">จองตอนนี้</button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card highlighted">
+                    <div class="service-badge">Popular</div>
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-spa"></i>
+                    </div>
+                    <h3>Japanese Aroma Massage</h3>
+                    <p class="service-price">เริ่มต้น 1,200 บาท</p>
+                    <p class="service-desc">
+                        การนวดน้ำมันหอมระเหยสูตรพิเศษนำเข้าจากญี่ปุ่น ผสานท่านวดบำบัดความเครียดลึกถึงชั้นกล้ามเนื้อ ช่วยปรับสมดุลร่างกายและอารมณ์
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-circle-check"></i> น้ำมันออร์แกนิคกลิ่น Hinoki & Sakura</li>
+                        <li><i class="fa-solid fa-circle-check"></i> นวดผ่อนคลายความเครียดสะสม</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ห้องบริการส่วนตัว (Private Room)</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openBookingModal('aroma')">จองตอนนี้</button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3>Traditional Japanese Sauna</h3>
+                    <p class="service-price">เริ่มต้น 350 บาท</p>
+                    <p class="service-desc">
+                        สัมผัสประสบการณ์ซาวน่าแบบดั้งเดิมของญี่ปุ่น ตู้อบความร้อนและหินภูเขาไฟ ช่วยขับสารพิษออกจากร่างกายผ่านทางเหงื่อได้อย่างมีประสิทธิภาพ
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fa-solid fa-circle-check"></i> หินภูเขาไฟนำเข้าจากญี่ปุ่น</li>
+                        <li><i class="fa-solid fa-circle-check"></i> บริการตักน้ำราดหินสร้างไอน้ำ (Löyly)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ช่วยกระตุ้นระบบเผาผลาญ</li>
+                    </ul>
+                    <button class="btn btn-card" onclick="openBookingModal('sauna')">จองตอนนี้</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Japanese Restaurant Section -->
+    <section id="restaurant" class="restaurant-section">
+        <div class="container">
+            <div class="restaurant-grid">
+                <div class="restaurant-text-content">
+                    <div class="section-header">
+                        <span class="section-tag">Authentic Taste</span>
+                        <h2>รสชาติญี่ปุ่นแท้ <span>หลังการแช่ออนเซ็น</span></h2>
+                        <span class="logo-badge-mini">FridayFunny JP ♨️</span>
+                    </div>
+
+                    <div class="restaurant-body">
+                        <p class="highlight-text">
+                            Elevate your relaxation at Friday Funny Premium Sauna with a truly authentic dining experience.
+                        </p>
+                        
+                        <div class="restaurant-highlight-box">
+                            <h4><i class="fa-solid fa-utensils"></i> Crafted by a True Japanese Master Chef</h4>
+                            <p>Savor traditional dishes prepared by our chef, born and trained in Japan, bringing genuine flavors straight to your plate.</p>
+                        </div>
+
+                        <div class="restaurant-highlight-box">
+                            <h4><i class="fa-solid fa-tags"></i> Affordable Luxury</h4>
+                            <p>Enjoy premium, comforting meals like rich curry and savory ramen, with starter menus ranging from only 100-300 THB.</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-cta-group">
+                        <button class="btn btn-primary" onclick="openBookingModal('restaurant')">
+                            จองโต๊ะล่วงหน้า <i class="fa-solid fa-utensils"></i>
+                        </button>
+                        <a href="#menu-gallery" class="btn btn-secondary" onclick="scrollToMenu(event)">ดูเมนูแนะนำ</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-image-wrapper">
+                    <img src="assets/restaurant_dish.png" alt="Japanese Ramen and Tonkatsu Curry" class="restaurant-img">
+                    <div class="restaurant-img-glow"></div>
+                </div>
+            </div>
+
+            <!-- Menu Gallery Sub-section -->
+            <div id="menu-gallery" class="menu-gallery">
+                <h3 class="menu-gallery-title">เมนูแนะนำยอดนิยม (Recommended Menu)</h3>
+                <div class="menu-grid">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <span class="menu-item-tag">Signature</span>
+                            <h4>FridayFunny Premium Tonkatsu Ramen</h4>
+                            <p class="menu-item-desc">ราเมงซุปกระดูกหมูเข้มข้น เส้นเหนียวนุ่ม ท็อปปิ้งด้วยหมูชาชูชิ้นโตและไข่ต้มซอสสูตรพิเศษ</p>
+                        </div>
+                        <div class="menu-item-price">220 THB</div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <span class="menu-item-tag">Best Seller</span>
+                            <h4>Katsu Curry Rice</h4>
+                            <p class="menu-item-desc">ข้าวแกงกะหรี่หมูทอดทงคัตสึ รสชาติกลมกล่อมเคี่ยวตามตำรับญี่ปุ่นแท้ๆ เผ็ดกำลังดี</p>
+                        </div>
+                        <div class="menu-item-price">180 THB</div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Tokusen Sake Set</h4>
+                            <p class="menu-item-desc">เซ็ตสาเกเกรดพรีเมียมคัดสรรพิเศษ เสิร์ฟพร้อมเครื่องเคียงเพิ่มความสุนทรีย์หลังผ่อนคลาย</p>
+                        </div>
+                        <div class="menu-item-price">290 THB</div>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Matcha Dorayaki & Ice Cream</h4>
+                            <p class="menu-item-desc">ของหวานยอดนิยม โดรายากิสอดไส้ถั่วแดง เสิร์ฟคู่กับไอศกรีมมัทฉะแท้เข้มข้น</p>
+                        </div>
+                        <div class="menu-item-price">120 THB</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Contact Us</span>
+                <h2>ติดต่อสอบถาม <span>และแผนที่ร้าน</span></h2>
+                <p class="section-intro">สอบถามรายละเอียด หรือจองบริการผ่านช่องทางต่างๆ ได้ตลอด 24 ชั่วโมง</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-panel">
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <div>
+                            <h4>ที่ตั้งร้าน (Location)</h4>
+                            <p>ใจกลางอำเภอบางบัวทอง (ใกล้เซ็นทรัลเวสต์เกต) นนทบุรี 11110</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>เวลาทำการ (Opening Hours)</h4>
+                            <p>เปิดให้บริการทุกวัน: 10:00 น. - 22:00 น.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>เบอร์โทรศัพท์ (Phone)</h4>
+                            <p>02-123-4567, 089-999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>อีเมล (Email)</h4>
+                            <p>contact@fridayfunnyonsen.com</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links-panel">
+                        <h4>ติดตามข่าวสารโปรโมชั่น</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-panel">
+                    <h3>ส่งข้อความหาเรา</h3>
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">ชื่อ-นามสกุล</label>
+                                <input type="text" id="contact-name" placeholder="ระบุชื่อของคุณ" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">เบอร์โทรศัพท์</label>
+                                <input type="tel" id="contact-phone" placeholder="ระบุเบอร์โทรศัพท์" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">อีเมล</label>
+                            <input type="email" id="contact-email" placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">เรื่องที่ต้องการติดต่อ</label>
+                            <select id="contact-subject">
+                                <option value="general">สอบถามข้อมูลทั่วไป</option>
+                                <option value="booking">มีปัญหาเกี่ยวกับการจอง</option>
+                                <option value="membership">สมัครสมาชิก / สิทธิพิเศษ</option>
+                                <option value="corporate">ติดต่อจัดอีเวนต์ / องค์กร</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">ข้อความรายละเอียด</label>
+                            <textarea id="contact-message" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">ส่งข้อความ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo-side">
+                    <img src="assets/logo.png" alt="FridayFunny Premium Onsen Logo" class="footer-logo">
+                    <div class="footer-logo-text">
+                        <h3>FridayFunny</h3>
+                        <p>PREMIUM SAUNA & ONSEN</p>
+                    </div>
+                </div>
+                <div class="footer-links-grid">
+                    <div>
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">หน้าแรก (HOME)</a></li>
+                            <li><a href="#about">เกี่ยวกับเรา (About us)</a></li>
+                            <li><a href="#massage-spa">นวดและสปา (Massage&Spa)</a></li>
+                            <li><a href="#restaurant">ร้านอาหารญี่ปุ่น (Restaurant)</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Member Benefits</h4>
+                        <ul>
+                            <li><a href="#" onclick="openAuthModal(event)">สมัครสมาชิกใหม่</a></li>
+                            <li><a href="#" onclick="openMemberModal(event)">ระบบสมาชิก</a></li>
+                            <li><a href="#" onclick="openAuthModal(event)">สิทธิพิเศษของร้าน</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#contact">ติดต่อเรา (Contact)</a></li>
+                            <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                            <li><a href="#">เงื่อนไขการใช้บริการ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p>&copy; 2026 FridayFunny Premium Sauna & Onsen. All Rights Reserved. Designed with <span style="color: #ff3333;">&hearts;</span> for Japanese Wellness.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">English</a> | <a href="#">日本語</a> | <a href="#">ไทย</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- MODAL 1: AUTHENTICATION (LOGIN / REGISTER) -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">เข้าสู่ระบบ (Login)</button>
+                <button class="auth-tab" id="tab-register" onclick="switchAuthTab('register')">สมัครสมาชิก (Register)</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form active" onsubmit="handleLoginSubmit(event)">
+                <div class="form-group">
+                    <label for="login-email">อีเมลผู้ใช้งาน (Email)</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="login-email" placeholder="example@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">รหัสผ่าน (Password)</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="ระบุรหัสผ่านของคุณ" required>
+                    </div>
+                </div>
+                <div class="auth-helper">
+                    <label><input type="checkbox"> จดจำฉันในระบบ</label>
+                    <a href="#" class="forgot-pass-link">ลืมรหัสผ่าน?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">เข้าสู่ระบบ</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form" onsubmit="handleRegisterSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reg-firstname">ชื่อจริง</label>
+                        <input type="text" id="reg-firstname" placeholder="ชื่อ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-lastname">นามสกุล</label>
+                        <input type="text" id="reg-lastname" placeholder="นามสกุล" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-phone">เบอร์โทรศัพท์</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="tel" id="reg-phone" placeholder="เช่น 0899999999" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">อีเมล (Email)</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="reg-email" placeholder="example@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">รหัสผ่าน (Password)</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="reg-password" placeholder="รหัสผ่านอย่างน้อย 6 ตัวอักษร" minlength="6" required>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox" required> ยอมรับเงื่อนไขการใช้บริการและนโยบายความเป็นส่วนตัว</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">สมัครสมาชิกเพื่อรับสิทธิ์ส่วนลด</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL 2: BOOKING SYSTEM -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+            <h3 class="modal-title"><i class="fa-solid fa-calendar-check"></i> แบบฟอร์มจองบริการออนไลน์</h3>
+            
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+                <div class="form-grid">
+                    <!-- Service selection -->
+                    <div class="form-group">
+                        <label for="book-service">เลือกประเภทบริการ (Select Service)</label>
+                        <select id="book-service" onchange="updateBookingOptions()">
+                            <option value="sauna-onsen">แพ็กเกจคู่: Sauna & Onsen Bathing</option>
+                            <option value="onsen">Premium Japanese Onsen (บ่อออนเซ็นเดี่ยว)</option>
+                            <option value="aroma">Japanese Aroma Massage (นวดอโรม่ากลิ่นฮิโนกิ)</option>
+                            <option value="sauna">Traditional Japanese Sauna (ซาวน่าดั้งเดิม)</option>
+                            <option value="restaurant">ร้านอาหารญี่ปุ่น (Dining Reservation)</option>
+                        </select>
+                    </div>
+
+                    <!-- Detail Info / Options based on selection -->
+                    <div class="form-group" id="package-detail-group">
+                        <label for="book-package">เลือกแพ็กเกจย่อย/ช่วงเวลาพิเศษ</label>
+                        <select id="book-package">
+                            <option value="standard">Standard Session (1.5 ชั่วโมง)</option>
+                            <option value="unlimited">Day Pass (ไม่จำกัดเวลา)</option>
+                            <option value="vip">VIP Premium Package (+ชุดชาเครื่องดื่มญี่ปุ่น)</option>
+                        </select>
+                    </div>
+
+                    <!-- Date selection -->
+                    <div class="form-group">
+                        <label for="book-date">วันที่ต้องการจอง (Date)</label>
+                        <input type="date" id="book-date" required>
+                    </div>
+
+                    <!-- Time selection -->
+                    <div class="form-group">
+                        <label for="book-time">เวลาที่สะดวก (Time)</label>
+                        <select id="book-time" required>
+                            <option value="10:00">10:00 น.</option>
+                            <option value="11:30">11:30 น.</option>
+                            <option value="13:00">13:00 น.</option>
+                            <option value="14:30">14:30 น.</option>
+                            <option value="16:00">16:00 น.</option>
+                            <option value="17:30">17:30 น.</option>
+                            <option value="19:00">19:00 น.</option>
+                            <option value="20:30">20:30 น.</option>
+                        </select>
+                    </div>
+
+                    <!-- Number of Guests -->
+                    <div class="form-group">
+                        <label for="book-guests">จำนวนผู้ใช้บริการ (Guests)</label>
+                        <select id="book-guests">
+                            <option value="1">1 ท่าน</option>
+                            <option value="2">2 ท่าน</option>
+                            <option value="3">3 ท่าน</option>
+                            <option value="4">4 ท่าน</option>
+                            <option value="5+">5 ท่านขึ้นไป</option>
+                        </select>
+                    </div>
+
+                    <!-- Special Requests -->
+                    <div class="form-group col-span-2">
+                        <label for="book-notes">ความต้องการเพิ่มเติม/หมายเหตุ (Special Request)</label>
+                        <textarea id="book-notes" rows="2" placeholder="เช่น นวดเน้นคอบ่าไหล่, มีโรคประจำตัว, ขอห้องนวดเงียบสงบ ฯลฯ"></textarea>
+                    </div>
+                </div>
+
+                <div class="booking-summary-box">
+                    <h4><i class="fa-solid fa-receipt"></i> สรุปรายละเอียดการจอง</h4>
+                    <div class="booking-summary-details">
+                        <p><strong>ประเภทบริการ:</strong> <span id="summary-service">-</span></p>
+                        <p><strong>แพ็กเกจย่อย:</strong> <span id="summary-package">-</span></p>
+                        <p><strong>วันและเวลา:</strong> <span id="summary-datetime">-</span></p>
+                        <p><strong>ราคารวมประมาณ:</strong> <span id="summary-price" class="text-highlight">0 บาท</span></p>
+                    </div>
+                </div>
+
+                <!-- Contact for non-logged-in booking -->
+                <div class="booking-contact-fields" id="guest-booking-fields">
+                    <h4>ข้อมูลผู้ติดต่อสำหรับการยืนยันการจอง</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="book-name">ชื่อผู้จอง</label>
+                            <input type="text" id="book-name" placeholder="ระบุชื่อผู้จอง">
+                        </div>
+                        <div class="form-group">
+                            <label for="book-phone">เบอร์ติดต่อ</label>
+                            <input type="tel" id="book-phone" placeholder="ระบุเบอร์โทรศัพท์มือถือ">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeBookingModal()">ยกเลิก</button>
+                    <button type="submit" class="btn btn-primary btn-glow">ยืนยันการจองคิวออนไลน์</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL 3: MEMBER DASHBOARD -->
+    <div id="memberModal" class="modal">
+        <div class="modal-content modal-large">
+            <button class="modal-close" onclick="closeMemberModal()">&times;</button>
+            
+            <div class="member-header">
+                <div class="member-avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="member-info">
+                    <h3 id="member-name-display">คุณ สมาชิกผู้ทรงเกียรติ</h3>
+                    <p><span class="badge-vip"><i class="fa-solid fa-gem"></i> Premium Member</span> ID: <span id="member-id-display">FF-9827</span></p>
+                </div>
+                <div class="member-points">
+                    <span class="points-val" id="member-points-display">350</span>
+                    <span class="points-lbl">คะแนนสะสม (Points)</span>
+                </div>
+            </div>
+
+            <div class="member-dashboard-grid">
+                <!-- Loyalty card -->
+                <div class="member-card-benefits">
+                    <h4>สิทธิพิเศษระดับพรีเมียมของคุณ</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-gift"></i> แลกรับราเมนฟรี เมื่อครบ 500 คะแนน</li>
+                        <li><i class="fa-solid fa-percent"></i> ส่วนลดค่าบริการนวดและสปา 10% ทุกรายการ</li>
+                        <li><i class="fa-solid fa-clock"></i> สิทธิ์เข้าใช้ออนเซ็นเลทกว่าเวลาปกติ 15 นาที</li>
+                        <li><i class="fa-solid fa-birthday-cake"></i> ฟรีบริการแช่ออนเซ็นในเดือนเกิดของคุณ</li>
+                    </ul>
+                    <div class="progress-container">
+                        <span class="progress-lbl">ระดับถัดไป: Gold Member (ขาดอีก 150 คะแนน)</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking History -->
+                <div class="member-history">
+                    <h4>ประวัติการจองและสถานะล่าสุด (My Bookings)</h4>
+                    <div class="booking-history-list" id="bookingHistoryList">
+                        <!-- History items dynamically inserted here -->
+                        <div class="no-bookings">คุณยังไม่มีประวัติการจองที่ผ่านมา</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-footer-actions">
+                <button class="btn btn-secondary" onclick="handleLogout()">ออกจากระบบ (Logout)</button>
+                <button class="btn btn-primary" onclick="closeMemberModal(); openBookingModal('sauna-onsen');">จองบริการใหม่</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert / Toast Container for interactive notifications -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <span class="toast-message">บันทึกข้อมูลเรียบร้อยแล้ว</span>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
