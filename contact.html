@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FridayFunny Premium Sauna & Onsen | ออนเซ็นและซาวน่าญี่ปุ่นแท้ นนทบุรี</title>
-    <meta name="description" content="สัมผัสประสบการณ์ซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี บริการนวด สปา และร้านอาหารญี่ปุ่นระดับพรีเมียม จองคิวออนไลน์ได้ทันที">
+    <title>Contact Us | FridayFunny Premium Sauna & Onsen</title>
+    <meta name="description" content="ติดต่อสอบถามข้อมูลบริการ จองคิว หรือดูแผนที่ร้านซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี">
     <link rel="stylesheet" href="index.css">
     <!-- Google Fonts: Outfit for English & Noto Sans Thai for Thai -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,10 @@
                 </div>
             </a>
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active" id="nav-home">HOME</a>
+                <a href="index.html" class="nav-link" id="nav-home">HOME</a>
                 <a href="massage-spa.html" class="nav-link" id="nav-massage-spa">Massage&Spa</a>
                 <a href="restaurant.html" class="nav-link" id="nav-restaurant">Restaurant</a>
-                <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+                <a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
                 <a href="about.html" class="nav-link" id="nav-about">About us</a>
                 <a href="#" class="nav-link" id="nav-member" onclick="openMemberModal(event)">Member</a>
                 <a href="#" class="nav-link btn-login" id="nav-login" onclick="openAuthModal(event)">Register/Login</a>
@@ -40,55 +40,96 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('assets/hero_bg.png');">
-        <div class="hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> Premium Sauna & Onsen</span>
-            <h1 class="hero-title-jp">極上の整い</h1>
-            <p class="hero-subtitle-jp">心และกาย... สู่จุด "ผ่อนคลาย" ที่แท้จริง</p>
-            <p class="hero-desc">
-                ยกระดับการผ่อนคลายด้วยซาวน่าสไตล์ญี่ปุ่นและห้องแช่ออนเซ็นไม้สนธรรมชาติที่ออกแบบเพื่อการบำบัดอย่างแท้จริง 
-                คืนพลังงานชีวิตและความสดชื่นให้กับร่างกายและจิตใจของคุณในทุกวินาที
-            </p>
-            <div class="hero-actions">
-                <a href="massage-spa.html" class="btn btn-primary">
-                    จองบริการ Massage & Spa <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="about.html" class="btn btn-secondary">เรียนรู้เพิ่มเติม</a>
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact-section page-start">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">Contact Us</span>
+                <h2>ติดต่อสอบถาม <span>และแผนที่ร้าน</span></h2>
+                <p class="section-intro">สอบถามรายละเอียด หรือจองบริการผ่านช่องทางต่างๆ ได้ตลอด 24 ชั่วโมง</p>
             </div>
-        </div>
-        <div class="scroll-down">
-            <a href="about.html" aria-label="Scroll down">
-                <span class="mouse">
-                    <span class="wheel"></span>
-                </span>
-            </a>
-        </div>
-    </section>
 
-    <section class="shop-section container" id="shopSection" style="padding: 72px 24px 40px;">
-        <div class="section-header text-center">
-            <span class="section-tag">E-commerce</span>
-            <h2>สินค้าเพื่อการผ่อนคลาย <span>จาก Firestore</span></h2>
-            <p class="section-intro">เลือกสินค้าที่คุณชอบ เพิ่มลงตะกร้า และชำระเงินได้ทันที</p>
-        </div>
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info-panel">
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <div>
+                            <h4>ที่ตั้งร้าน (Location)</h4>
+                            <p>ใจกลางอำเภอบางบัวทอง (ใกล้เซ็นทรัลเวสต์เกต) นนทบุรี 11110</p>
+                        </div>
+                    </div>
 
-        <div class="shop-layout">
-            <div class="product-grid" id="productGrid"></div>
-            <aside class="cart-card">
-                <div class="cart-header">
-                    <h3><i class="fa-solid fa-cart-shopping"></i> ตะกร้าสินค้า</h3>
-                    <span class="cart-count" id="cartCount">0</span>
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>เวลาทำการ (Opening Hours)</h4>
+                            <p>เปิดให้บริการทุกวัน: 10:00 น. - 22:00 น.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>เบอร์โทรศัพท์ (Phone)</h4>
+                            <p>02-123-4567, 089-999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>อีเมล (Email)</h4>
+                            <p>contact@fridayfunnyonsen.com</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links-panel">
+                        <h4>ติดตามข่าวสารโปรโมชั่น</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" aria-label="LINE"><i class="fa-brands fa-line"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="cart-items" id="cartItems">
-                    <p class="empty-cart">ยังไม่มีสินค้าในตะกร้า</p>
+
+                <!-- Contact Form -->
+                <div class="contact-form-panel">
+                    <h3>ส่งข้อความหาเรา</h3>
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">ชื่อ-นามสกุล</label>
+                                <input type="text" id="contact-name" placeholder="ระบุชื่อของคุณ" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">เบอร์โทรศัพท์</label>
+                                <input type="tel" id="contact-phone" placeholder="ระบุเบอร์โทรศัพท์" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">อีเมล</label>
+                            <input type="email" id="contact-email" placeholder="example@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">เรื่องที่ต้องการติดต่อ</label>
+                            <select id="contact-subject">
+                                <option value="general">สอบถามข้อมูลทั่วไป</option>
+                                <option value="booking">มีปัญหาเกี่ยวกับการจอง</option>
+                                <option value="membership">สมัครสมาชิก / สิทธิพิเศษ</option>
+                                <option value="corporate">ติดต่อจัดอีเวนต์ / องค์กร</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">ข้อความรายละเอียด</label>
+                            <textarea id="contact-message" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">ส่งข้อความ</button>
+                    </form>
                 </div>
-                <div class="cart-summary">
-                    <div class="summary-row"><span>ค่าจัดส่ง</span><strong id="shippingFee">50 บาท</strong></div>
-                    <div class="summary-row total"><span>ยอดรวม</span><strong id="cartTotal">0 บาท</strong></div>
-                </div>
-                <button class="btn btn-primary btn-block" id="checkoutBtn" onclick="handleCheckout()">ชำระเงิน</button>
-            </aside>
+            </div>
         </div>
     </section>
 
@@ -378,9 +419,6 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
-    <script src="src/ecommerce-service.js"></script>
 </body>
 </html>

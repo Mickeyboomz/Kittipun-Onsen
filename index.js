@@ -1,8 +1,21 @@
 // --- ON LOAD INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", () => {
-    // Scroll events for sticky header & active nav links
+    // Scroll events for sticky header
     window.addEventListener("scroll", handleWindowScroll);
     handleWindowScroll(); // Run once on load
+    
+    // Set active page menu link
+    const path = window.location.pathname.split("/").pop();
+    const currentPage = path === "" ? "index.html" : path;
+    const navLinks = document.querySelectorAll(".nav-menu .nav-link");
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
     
     // Mobile navigation toggle
     const mobileToggle = document.getElementById("mobileMenuToggle");
@@ -21,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Close menu when clicking navigation link on mobile
-    const navLinks = document.querySelectorAll(".nav-link");
-    navLinks.forEach(link => {
+    const allLinks = document.querySelectorAll(".nav-link");
+    allLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (navMenu) navMenu.classList.remove("open");
             if (mobileToggle) {
@@ -62,35 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
     updateHeaderNav();
 });
 
-// --- HEADER SCROLL & SECTION HIGHLIGHTING ---
+// --- HEADER SCROLL ---
 function handleWindowScroll() {
     const header = document.querySelector(".header");
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-
-    // Highlight menu links based on scroll position
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-menu .nav-link");
-    let currentSectionId = "home";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            currentSectionId = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === `#${currentSectionId}`) {
-            link.classList.add("active");
+    if (header) {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
         } else {
-            link.classList.remove("active");
+            header.classList.remove("scrolled");
         }
-    });
+    }
 }
 
 // Scroll to Menu helper for restaurant section link
@@ -238,6 +232,8 @@ function updateHeaderNav() {
     const currentUser = JSON.parse(localStorage.getItem("ff_current_user"));
     const loginLink = document.getElementById("nav-login");
     const memberLink = document.getElementById("nav-member");
+
+    if (!loginLink || !memberLink) return;
 
     if (currentUser) {
         loginLink.textContent = "Logout";
@@ -535,3 +531,11 @@ function formatDate(dateString) {
     const year = date.getFullYear() + 543; // convert to Thai Buddhist year
     return `${day} ${month} ${year}`;
 }
+
+function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById("contact-name").value;
+    showToast(`ขอบคุณคุณ ${name} ที่ติดต่อเรา เจ้าหน้าที่จะติดต่อกลับโดยเร็วที่สุด`);
+    e.target.reset();
+}
+

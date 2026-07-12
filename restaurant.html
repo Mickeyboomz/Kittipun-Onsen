@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FridayFunny Premium Sauna & Onsen | ออนเซ็นและซาวน่าญี่ปุ่นแท้ นนทบุรี</title>
-    <meta name="description" content="สัมผัสประสบการณ์ซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี บริการนวด สปา และร้านอาหารญี่ปุ่นระดับพรีเมียม จองคิวออนไลน์ได้ทันที">
+    <title>Restaurant | FridayFunny Premium Sauna & Onsen</title>
+    <meta name="description" content="สัมผัสรสชาติอาหารญี่ปุ่นดั้งเดิมระดับพรีเมียม ปรุงโดยเชฟชาวญี่ปุ่นแท้ๆ อิ่มอร่อยหลังจากการแช่ออนเซ็นอย่างผ่อนคลาย">
     <link rel="stylesheet" href="index.css">
     <!-- Google Fonts: Outfit for English & Noto Sans Thai for Thai -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,9 +26,9 @@
                 </div>
             </a>
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active" id="nav-home">HOME</a>
+                <a href="index.html" class="nav-link" id="nav-home">HOME</a>
                 <a href="massage-spa.html" class="nav-link" id="nav-massage-spa">Massage&Spa</a>
-                <a href="restaurant.html" class="nav-link" id="nav-restaurant">Restaurant</a>
+                <a href="restaurant.html" class="nav-link active" id="nav-restaurant">Restaurant</a>
                 <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
                 <a href="about.html" class="nav-link" id="nav-about">About us</a>
                 <a href="#" class="nav-link" id="nav-member" onclick="openMemberModal(event)">Member</a>
@@ -40,55 +40,88 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('assets/hero_bg.png');">
-        <div class="hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> Premium Sauna & Onsen</span>
-            <h1 class="hero-title-jp">極上の整い</h1>
-            <p class="hero-subtitle-jp">心และกาย... สู่จุด "ผ่อนคลาย" ที่แท้จริง</p>
-            <p class="hero-desc">
-                ยกระดับการผ่อนคลายด้วยซาวน่าสไตล์ญี่ปุ่นและห้องแช่ออนเซ็นไม้สนธรรมชาติที่ออกแบบเพื่อการบำบัดอย่างแท้จริง 
-                คืนพลังงานชีวิตและความสดชื่นให้กับร่างกายและจิตใจของคุณในทุกวินาที
-            </p>
-            <div class="hero-actions">
-                <a href="massage-spa.html" class="btn btn-primary">
-                    จองบริการ Massage & Spa <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="about.html" class="btn btn-secondary">เรียนรู้เพิ่มเติม</a>
+    <!-- Japanese Restaurant Section -->
+    <section id="restaurant" class="restaurant-section page-start">
+        <div class="container">
+            <div class="restaurant-grid">
+                <div class="restaurant-text-content">
+                    <div class="section-header">
+                        <span class="section-tag">Authentic Taste</span>
+                        <h2>รสชาติญี่ปุ่นแท้ <span>หลังการแช่ออนเซ็น</span></h2>
+                        <span class="logo-badge-mini">FridayFunny JP ♨️</span>
+                    </div>
+
+                    <div class="restaurant-body">
+                        <p class="highlight-text">
+                            Elevate your relaxation at Friday Funny Premium Sauna with a truly authentic dining experience.
+                        </p>
+                        
+                        <div class="restaurant-highlight-box">
+                            <h4><i class="fa-solid fa-utensils"></i> Crafted by a True Japanese Master Chef</h4>
+                            <p>Savor traditional dishes prepared by our chef, born and trained in Japan, bringing genuine flavors straight to your plate.</p>
+                        </div>
+
+                        <div class="restaurant-highlight-box">
+                            <h4><i class="fa-solid fa-tags"></i> Affordable Luxury</h4>
+                            <p>Enjoy premium, comforting meals like rich curry and savory ramen, with starter menus ranging from only 100-300 THB.</p>
+                        </div>
+                    </div>
+
+                    <div class="restaurant-cta-group">
+                        <button class="btn btn-primary" onclick="openBookingModal('restaurant')">
+                            จองโต๊ะล่วงหน้า <i class="fa-solid fa-utensils"></i>
+                        </button>
+                        <a href="#menu-gallery" class="btn btn-secondary" onclick="scrollToMenu(event)">ดูเมนูแนะนำ</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-image-wrapper">
+                    <img src="assets/restaurant_dish.png" alt="Japanese Ramen and Tonkatsu Curry" class="restaurant-img">
+                    <div class="restaurant-img-glow"></div>
+                </div>
             </div>
-        </div>
-        <div class="scroll-down">
-            <a href="about.html" aria-label="Scroll down">
-                <span class="mouse">
-                    <span class="wheel"></span>
-                </span>
-            </a>
-        </div>
-    </section>
 
-    <section class="shop-section container" id="shopSection" style="padding: 72px 24px 40px;">
-        <div class="section-header text-center">
-            <span class="section-tag">E-commerce</span>
-            <h2>สินค้าเพื่อการผ่อนคลาย <span>จาก Firestore</span></h2>
-            <p class="section-intro">เลือกสินค้าที่คุณชอบ เพิ่มลงตะกร้า และชำระเงินได้ทันที</p>
-        </div>
+            <!-- Menu Gallery Sub-section -->
+            <div id="menu-gallery" class="menu-gallery">
+                <h3 class="menu-gallery-title">เมนูแนะนำยอดนิยม (Recommended Menu)</h3>
+                <div class="menu-grid">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <span class="menu-item-tag">Signature</span>
+                            <h4>FridayFunny Premium Tonkatsu Ramen</h4>
+                            <p class="menu-item-desc">ราเมงซุปกระดูกหมูเข้มข้น เส้นเหนียวนุ่ม ท็อปปิ้งด้วยหมูชาชูชิ้นโตและไข่ต้มซอสสูตรพิเศษ</p>
+                        </div>
+                        <div class="menu-item-price">220 THB</div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <span class="menu-item-tag">Best Seller</span>
+                            <h4>Katsu Curry Rice</h4>
+                            <p class="menu-item-desc">ข้าวแกงกะหรี่หมูทอดทงคัตสึ รสชาติกลมกล่อมเคี่ยวตามตำรับญี่ปุ่นแท้ๆ เผ็ดกำลังดี</p>
+                        </div>
+                        <div class="menu-item-price">180 THB</div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Tokusen Sake Set</h4>
+                            <p class="menu-item-desc">เซ็ตสาเกเกรดพรีเมียมคัดสรรพิเศษ เสิร์ฟพร้อมเครื่องเคียงเพิ่มความสุนทรีย์หลังผ่อนคลาย</p>
+                        </div>
+                        <div class="menu-item-price">290 THB</div>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-info">
+                            <h4>Matcha Dorayaki & Ice Cream</h4>
+                            <p class="menu-item-desc">ของหวานยอดนิยม โดรายากิสอดไส้ถั่วแดง เสิร์ฟคู่กับไอศกรีมมัทฉะแท้เข้มข้น</p>
+                        </div>
+                        <div class="menu-item-price">120 THB</div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="shop-layout">
-            <div class="product-grid" id="productGrid"></div>
-            <aside class="cart-card">
-                <div class="cart-header">
-                    <h3><i class="fa-solid fa-cart-shopping"></i> ตะกร้าสินค้า</h3>
-                    <span class="cart-count" id="cartCount">0</span>
-                </div>
-                <div class="cart-items" id="cartItems">
-                    <p class="empty-cart">ยังไม่มีสินค้าในตะกร้า</p>
-                </div>
-                <div class="cart-summary">
-                    <div class="summary-row"><span>ค่าจัดส่ง</span><strong id="shippingFee">50 บาท</strong></div>
-                    <div class="summary-row total"><span>ยอดรวม</span><strong id="cartTotal">0 บาท</strong></div>
-                </div>
-                <button class="btn btn-primary btn-block" id="checkoutBtn" onclick="handleCheckout()">ชำระเงิน</button>
-            </aside>
         </div>
     </section>
 
@@ -378,9 +411,6 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
-    <script src="src/ecommerce-service.js"></script>
 </body>
 </html>

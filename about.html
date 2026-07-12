@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FridayFunny Premium Sauna & Onsen | ออนเซ็นและซาวน่าญี่ปุ่นแท้ นนทบุรี</title>
-    <meta name="description" content="สัมผัสประสบการณ์ซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี บริการนวด สปา และร้านอาหารญี่ปุ่นระดับพรีเมียม จองคิวออนไลน์ได้ทันที">
+    <title>About Us | FridayFunny Premium Sauna & Onsen</title>
+    <meta name="description" content="สัมผัสประสบการณ์ซาวน่าและออนเซ็นญี่ปุ่นแท้แห่งแรกในนนทบุรี บริการนวด สปา และร้านอาหารญี่ปุ่นระดับพรีเมียม">
     <link rel="stylesheet" href="index.css">
     <!-- Google Fonts: Outfit for English & Noto Sans Thai for Thai -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,11 +26,11 @@
                 </div>
             </a>
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html" class="nav-link active" id="nav-home">HOME</a>
+                <a href="index.html" class="nav-link" id="nav-home">HOME</a>
                 <a href="massage-spa.html" class="nav-link" id="nav-massage-spa">Massage&Spa</a>
                 <a href="restaurant.html" class="nav-link" id="nav-restaurant">Restaurant</a>
                 <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
-                <a href="about.html" class="nav-link" id="nav-about">About us</a>
+                <a href="about.html" class="nav-link active" id="nav-about">About us</a>
                 <a href="#" class="nav-link" id="nav-member" onclick="openMemberModal(event)">Member</a>
                 <a href="#" class="nav-link btn-login" id="nav-login" onclick="openAuthModal(event)">Register/Login</a>
             </nav>
@@ -40,55 +40,42 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('assets/hero_bg.png');">
-        <div class="hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> Premium Sauna & Onsen</span>
-            <h1 class="hero-title-jp">極上の整い</h1>
-            <p class="hero-subtitle-jp">心และกาย... สู่จุด "ผ่อนคลาย" ที่แท้จริง</p>
-            <p class="hero-desc">
-                ยกระดับการผ่อนคลายด้วยซาวน่าสไตล์ญี่ปุ่นและห้องแช่ออนเซ็นไม้สนธรรมชาติที่ออกแบบเพื่อการบำบัดอย่างแท้จริง 
-                คืนพลังงานชีวิตและความสดชื่นให้กับร่างกายและจิตใจของคุณในทุกวินาที
-            </p>
-            <div class="hero-actions">
-                <a href="massage-spa.html" class="btn btn-primary">
-                    จองบริการ Massage & Spa <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="about.html" class="btn btn-secondary">เรียนรู้เพิ่มเติม</a>
+    <!-- About Us & Onsen Section -->
+    <section id="about" class="about-section page-start">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <img src="assets/onsen_tub.png" alt="FridayFunny Onsen Wooden Tub" class="about-img">
+                    <div class="about-img-glow"></div>
+                </div>
+                <div class="about-text-content">
+                    <div class="section-header">
+                        <span class="section-tag">About Us</span>
+                        <h2>ซาวน่าและออนเซ็นญี่ปุ่นแท้ <span>แห่งแรกในนนทบุรี</span></h2>
+                    </div>
+                    
+                    <div class="about-desc-thai">
+                        <p class="highlight-text">
+                            ชาวนนท์ <strong>FridayFunny Premium Sauna</strong> บริการซาวน่าออนเซ็น ญี่ปุ่นแท้ สัมผัสซาวน่าและออนเซ็นญี่ปุ่นแห่งแรกในนนทบุรี
+                        </p>
+                        <p>
+                            สถานที่ของเราตั้งอยู่ใจกลางบางบัวทอง ซึ่งเป็นย่านพักผ่อนแห่งใหม่ของนนทบุรี ช่วยให้คุณหนีออกจากความวุ่นวายของชีวิตได้อย่างสงบสุข ดำเนินการโดยทีมงานที่มีชื่อเสียงในการจัดงานซาวน่าญี่ปุ่น เรานำวัฒนธรรมซาวน่าและสปาแบบญี่ปุ่นแท้ๆ มาสู่ประเทศไทยเป็นครั้งแรก
+                        </p>
+                    </div>
+
+                    <div class="about-desc-eng">
+                        <p>
+                            Located in the heart of Bang Bua Thong - Nonthaburi's newest wellness and relaxation hub - our sanctuary offers a peaceful escape from the hustle and bustle of everyday life. Managed by a team renowned for organizing premium Japanese sauna events, we are proud to bring an authentic Japanese sauna and spa culture to Thailand.
+                        </p>
+                    </div>
+
+                    <div class="about-cta">
+                        <button class="btn btn-primary btn-glow" onclick="openBookingModal('sauna-onsen')">
+                            สนใจจองคลิกจองเลย <i class="fa-solid fa-calendar-check"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="scroll-down">
-            <a href="about.html" aria-label="Scroll down">
-                <span class="mouse">
-                    <span class="wheel"></span>
-                </span>
-            </a>
-        </div>
-    </section>
-
-    <section class="shop-section container" id="shopSection" style="padding: 72px 24px 40px;">
-        <div class="section-header text-center">
-            <span class="section-tag">E-commerce</span>
-            <h2>สินค้าเพื่อการผ่อนคลาย <span>จาก Firestore</span></h2>
-            <p class="section-intro">เลือกสินค้าที่คุณชอบ เพิ่มลงตะกร้า และชำระเงินได้ทันที</p>
-        </div>
-
-        <div class="shop-layout">
-            <div class="product-grid" id="productGrid"></div>
-            <aside class="cart-card">
-                <div class="cart-header">
-                    <h3><i class="fa-solid fa-cart-shopping"></i> ตะกร้าสินค้า</h3>
-                    <span class="cart-count" id="cartCount">0</span>
-                </div>
-                <div class="cart-items" id="cartItems">
-                    <p class="empty-cart">ยังไม่มีสินค้าในตะกร้า</p>
-                </div>
-                <div class="cart-summary">
-                    <div class="summary-row"><span>ค่าจัดส่ง</span><strong id="shippingFee">50 บาท</strong></div>
-                    <div class="summary-row total"><span>ยอดรวม</span><strong id="cartTotal">0 บาท</strong></div>
-                </div>
-                <button class="btn btn-primary btn-block" id="checkoutBtn" onclick="handleCheckout()">ชำระเงิน</button>
-            </aside>
         </div>
     </section>
 
@@ -378,9 +365,6 @@
         </div>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
-    <script src="src/ecommerce-service.js"></script>
 </body>
 </html>
