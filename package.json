@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "esbuild src/main.js --bundle --outfile=index.js --format=iife --platform=browser",
-    "dev": "esbuild src/main.js --bundle --outfile=index.js --format=iife --platform=browser --watch"
+    "dev": "esbuild src/main.js --bundle --outfile=index.js --format=iife --platform=browser --watch",
+    "vercel-build": "echo Skip build"
   },
   "dependencies": {
     "firebase": "^11.6.0"
